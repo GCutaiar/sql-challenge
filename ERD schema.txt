@@ -1,0 +1,41 @@
+Departments
+-
+department_number PK INT
+departent_name VARCHAR
+
+Employee_Number
+-
+employee_number PK INT
+department_number INT FK >- Departments.department_number
+from_date DATE
+to_date DATE
+
+Department_Manager
+-
+department_number INT FK >- Departments.department_number
+employee_number INT FK >- Employee_Number.employee_number
+from_date DATE
+to_date DATE
+
+Employees
+-
+employee_number INT FK >- Employee_Number.employee_number
+birth_date DATE
+first_name VARCHAR
+last_name VARCHAR
+gender VARCHAR
+hire_date DATE
+
+SALARIES
+-
+employee_number INT FK >- Employee_Number.employee_number
+salary INT
+from_date DATE
+to_date DATE
+
+TITLES
+-
+employee_number INT FK >- Employee_Number.employee_number
+title VARCHAR
+from_date DATE
+to_date DATE
